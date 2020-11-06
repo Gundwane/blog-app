@@ -1,3 +1,3 @@
 # Strapi application
 
-A quick description of your strapi application
+Simple blog api to create users, posts and comments
