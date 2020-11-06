@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autors",
+  "info": {
+    "name": "autor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "avatar": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "comentarios": {
+      "via": "autor",
+      "collection": "comentario"
+    },
+    "posts": {
+      "via": "autor",
+      "collection": "post"
+    }
+  }
+}
